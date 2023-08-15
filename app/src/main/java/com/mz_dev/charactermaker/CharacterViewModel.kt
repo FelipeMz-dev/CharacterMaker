@@ -34,7 +34,7 @@ class CharacterViewModel : ViewModel() {
 
     @OptIn(BetaOpenAI::class)
     private fun generateImage(references: Character) = viewModelScope.launch {
-        var prompt = "one character, ${references.toList()}"
+        var prompt = "one character with ${references.toList()}"
         var images = openAI.imageURL(creation = ImageCreation(prompt, n = 1, size = ImageSize.is512x512))
         urlImage = images.first().url
     }

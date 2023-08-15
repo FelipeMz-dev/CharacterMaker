@@ -7,9 +7,9 @@ data class Character(
 ){
     fun toList(): List<String>{
         var stringList = mutableListOf<String>()
-        if (head.isNotEmpty()) stringList.add("head made of $head ")
-        if (torso.isNotEmpty()) stringList.add("trunk made of $torso ")
-        if (limbs.isNotEmpty()) stringList.add("limbs made of $limbs ")
+        if (head.isNotEmpty()) stringList.add("$head head ")
+        if (torso.isNotEmpty()) stringList.add("$torso torso ")
+        if (limbs.isNotEmpty()) stringList.add("$limbs limbs ")
         return stringList
     }
 }
